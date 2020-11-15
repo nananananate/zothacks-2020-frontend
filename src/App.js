@@ -16,16 +16,18 @@ function App() {
   const [recipe, setRecipe] = useState([]);
   return (
     <div className="app fill-view">
-      <Router>
-        <Switch>
-          <Route exact path={"/"}>
-            <SearchPage recipe={recipe} setRecipe={setRecipe}/>
-          </Route>
-          <Route exact path={"/recipes"}>
-            <RecipePage recipe={recipe}/>
-          </Route>
-        </Switch>
-      </Router>
+      <div basename="zothacks-2020-frontend">
+        <Router>
+          <Switch>
+            <Route exact path={"/"}>
+              <SearchPage recipe={recipe} setRecipe={setRecipe}/>
+            </Route>
+            <Route exact path={"/recipes"}>
+              <RecipePage recipe={recipe}/>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 }
